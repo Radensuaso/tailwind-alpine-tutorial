@@ -28,6 +28,12 @@
         margin-bottom: 1rem;
         font-family: var(--font1);
       }
+      h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 2rem;
+        margin-bottom: 0.75rem;
+      }
 
       .font1 {
         font-family: var(--font1);
@@ -67,6 +73,18 @@
 
       .categories > a {
         @apply bg-gray-200 rounded-full px-3 py-1 hover:bg-gray-500 hover:text-white;
+      }
+
+      .hover-list > * {
+        @apply hover:bg-gray-100 rounded-md transition duration-150;
+      }
+
+      .hover-list > * > a {
+        @apply flex items-center p-2 block;
+      }
+
+      .highlight {
+        @apply !bg-indigo-100;
       }
 
       .card {
@@ -131,9 +149,7 @@
       <main class="col-span-2 mx-[10%]">
         <article class="card">
           <div class="flex items-center justify-between px-4 h-14">
-            <h3 class="tex-lg font-bold w-[50%] truncate">
-              Little Jedi this only goes to the middle
-            </h3>
+            <h3 class="tex-lg font-bold w-[50%] truncate">Little Jedi</h3>
             <div class="text-sm text-gray-300">
               flickr @
               <a class="hover:underline" href="" target="blank">John Doe</a>
@@ -185,7 +201,118 @@
           </div>
         </article>
       </main>
-      <aside class="col-span-1 mr-[20%]">Sidebar</aside>
+      <aside class="col-span-1 mr-[20%]">
+        <section class="card p-4">
+          <h2>Categories</h2>
+          <ul class="hover-list">
+            <li class="highlight">
+              <a href="">
+                <img
+                  class="w-8 h-8 object-cover mr-2"
+                  src="https://img.icons8.com/small/96/null/landscape.png"
+                  alt="" />
+                <span class="font-bold text-sm"> Landscape</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  class="w-8 h-8 object-cover mr-2"
+                  src="https://img.icons8.com/small/96/null/portrait.png"
+                  alt="" />
+                <span class="font-bold text-sm"> People</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  class="w-8 h-8 object-cover mr-2"
+                  src="https://img.icons8.com/small/96/null/dog.png"
+                  alt="" />
+                <span class="font-bold text-sm">Animals</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  class="w-8 h-8 object-cover mr-2"
+                  src="https://img.icons8.com/small/96/null/collage.png"
+                  alt="" />
+                <span class="font-bold text-sm">Abstract</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  class="w-8 h-8 object-cover mr-2"
+                  src="https://img.icons8.com/small/96/null/180-degrees.png"
+                  alt="" />
+                <span class="font-bold text-sm">Black & White</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="card p-4">
+          <h2>Top Photos</h2>
+          <ul class="hover-list">
+            <li>
+              <a href="">
+                <img
+                  class="w-10 h-10 rounded-lg object-cover mr-3"
+                  src="https://live.staticflickr.com/65535/50618365686_36f887ab88_c.jpg"
+                  alt="" />
+                <img
+                  class="w-6 h-6 rounded-full object-cover mr-0.5"
+                  src="https://img.icons8.com/small/96/A9A9A9/happy.png"
+                  alt="" />
+                <span class="font-bold text-sm mr-1">Homer</span>
+                <span class="font-light text-gray-500">(5 Likes)</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  class="w-10 h-10 rounded-lg object-cover mr-3"
+                  src="https://live.staticflickr.com/65535/50618365686_36f887ab88_c.jpg"
+                  alt="" />
+                <img
+                  class="w-6 h-6 rounded-full object-cover mr-0.5"
+                  src="https://img.icons8.com/small/96/A9A9A9/happy.png"
+                  alt="" />
+                <span class="font-bold text-sm mr-1">Homer</span>
+                <span class="font-light text-gray-500">(5 Likes)</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="card p-4">
+          <h2>Top Captions</h2>
+          <ul class="hover-list">
+            <li>
+              <a href="">
+                <img
+                  class="w-8 h-8 rounded-full object-cover mr-1"
+                  src="https://img.icons8.com/small/96/A9A9A9/happy.png"
+                  alt="" />
+                <span class="font-bold text-sm mr-1">Homer</span>
+                <span class="font-light text-gray-500">(5 Likes)</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img
+                  class="w-8 h-8 rounded-full object-cover mr-1"
+                  src="https://img.icons8.com/small/96/A9A9A9/happy.png"
+                  alt="" />
+                <span class="font-bold text-sm mr-1">Homer</span>
+                <span class="font-light text-gray-500">(5 Likes)</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </aside>
     </content>
   </body>
 </html>
